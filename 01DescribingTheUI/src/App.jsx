@@ -1,6 +1,13 @@
 // import Gallery from "./Gallery.jsx";
 // import { Profile } from "./Gallery.jsx";
 
+import Person from "./components/Person";
+import UserList from "./components/UserList";
+import Product from "./components/Product";
+import Weather from "./components/Weather";
+import UserStatus from "./components/UserStatus";
+import Greeting from "./components/Greeting";
+
 // export default function App() {
 //   return <Profile />;
 // }
@@ -8,18 +15,11 @@
 export default function App() {
   return (
     <>
-      <div class="intro">
-        <h1>Welcome to my website!</h1>
-      </div>
-      <p class="summary">
-        You can find my thoughts here.
-        <br />
-        <br />
-        <b>
-          And <i>pictures</i>
-        </b>{" "}
-        of scientists!
-      </p>
+      {/* <Person name="yash" age={20} />
+      <Product name="Iphone" price={60000} />
+      <Weather />
+      <UserStatus isLoggedIn={true} isAdmin={false} /> */}
+      <Greeting timeOfday="Morning" />
     </>
   );
 }
