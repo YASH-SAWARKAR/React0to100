@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import "./App.css";
+import ComponentOne from "./components/ComponentOne";
+import ComponentTwo from "./components/ComponentTwo";
+const App = () => {
+  // const [cnt, steCnt] = useState(0);
+
+  // const increment = () => steCnt(cnt + 1);
+  // const decrement = () => steCnt(cnt - 1);
+
+  // const [friend, setFriend] = useState(["Yash", "Ravi"]);
+
+  // const addOneNewFriend = () => {
+  //   setFriend([...friend, "HuXn"]);
+  // };
+  // const removeFriend = () => {
+  //   setFriend(friend.filter((f) => f !== "Yash"));
+  // };
+
+  // const [movie, setMovie] = useState([
+  //   { id: 1, title: "Inception" },
+  //   { id: 2, title: "Interstellar" },
+  // ]);
+
+  // const submitHandler = () => {
+  //   setMovie(
+  //     movie.map((m) => (m.id === 1 ? { ...movie, title: "Spider Man " } : m))
+  //   );
+  // };
+
+  const [count, setCount] = useState(0);
+  const [cnt, setCnt] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      {/* <h1>{cnt}</h1>
+      <button onClick={increment}>Cnt + 1</button>
+      <button onClick={decrement}>Cnt - 1</button> */}
+      {/* {friend.map((f) => (
+        <li key={Math.random()}> {f}</li>
+      ))} */}
 
-export default App
+      {/* <button onClick={addOneNewFriend}>Add New Friend</button> */}
+      {/* <button onClick={removeFriend}> Remove Friend</button> */}
+      {/* {movie.map((m) => (
+        <li key={Math.random()}> {m.title}</li>
+      ))}
+
+      <button onClick={submitHandler}>Change Name</button> */}
+
+      <ComponentOne count={count} onClickHandler={() => setCount(count + 1)} />
+      <ComponentTwo cnt={cnt} onClickHandler={() => setCnt(cnt + 1)} />
+    </>
+  );
+};
+
+export default App;
