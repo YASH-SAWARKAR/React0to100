@@ -3,6 +3,10 @@ import { useState } from "react";
 import "./App.css";
 import ComponentOne from "./components/ComponentOne";
 import ComponentTwo from "./components/ComponentTwo";
+import Counter from "./components/Counter";
+import TodoList from "./components/TodoList";
+import Profile from "./components/Profile";
+import { ShoppingList } from "./components/ShoppingList";
 const App = () => {
   // const [cnt, steCnt] = useState(0);
 
@@ -29,8 +33,8 @@ const App = () => {
   //   );
   // };
 
-  const [count, setCount] = useState(0);
-  const [cnt, setCnt] = useState(0);
+  // const [count, setCount] = useState(0);
+  // const [cnt, setCnt] = useState(0);
 
   return (
     <>
@@ -49,8 +53,13 @@ const App = () => {
 
       <button onClick={submitHandler}>Change Name</button> */}
 
-      <ComponentOne count={count} onClickHandler={() => setCount(count + 1)} />
-      <ComponentTwo cnt={cnt} onClickHandler={() => setCnt(cnt + 1)} />
+      {/* <ComponentOne count={count} onClickHandler={() => setCount(count + 1)} /> */}
+      {/* <ComponentTwo cnt={cnt} onClickHandler={() => setCnt(cnt + 1)} /> */}
+
+      <Counter />
+      <TodoList />
+      <Profile />
+      <ShoppingList />
     </>
   );
 };
