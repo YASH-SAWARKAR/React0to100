@@ -1,15 +1,21 @@
 import { createContext } from "react";
 import ComponentA from "./components/ComponentA";
+import UserProfile from "./components/UserProfile";
+import { UserProvider } from "./components/userContext";
+import UpdateUser from "./components/UpdateUser";
 export const Data = createContext();
 
 const App = () => {
   const name = "Yash Sawarkar";
   return (
-    <div>
-      <Data.Provider value={name}>
+    <UserProvider>
+      {/* <Data.Provider value={name}>
         <ComponentA />
-      </Data.Provider>
-    </div>
+      </Data.Provider> */}
+
+      <UserProfile />
+      <UpdateUser />
+    </UserProvider>
   );
 };
 
